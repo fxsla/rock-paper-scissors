@@ -11,11 +11,11 @@ function getComputerChoice() {
 
 }
 
-function play() {
+function  play(){
     let playerSelection = prompt("Enter rock, paper or scissors").toLowerCase()
     let computerSelection= getComputerChoice()
 
-    parseInt(playRound(playerSelection, computerSelection))
+    return parseInt(playRound(playerSelection, computerSelection))
 }
 
 
@@ -51,13 +51,11 @@ function playRound(playerSelection, computerSelection){
 function game() {
     let score = 0;
 
-    console.log(typeof score)
-
     for(let i=1;i<=5;i++){
-        score += parseInt(play());
+        score += play()
     }
 
-    console.log(`Final score: ${score} / 5`)
+    console.log("Final score: ", score + " / 5")
 }
 
 game();
